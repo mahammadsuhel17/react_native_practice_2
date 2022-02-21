@@ -8,19 +8,18 @@ import data from '../../data.json'
 const FlatListScreen = () => {
   const [userdata, setuserData] = useState(data);
   const removeItem = (id) => {
-    console.log("id",id);
-      let newuser=userdata.filter((val, i)=>
-      {
-        if(val.id!==id){
-          // console.log("vlue",val)
-          return val
-        }
+    console.log("id", id);
+    let newuser = userdata.filter((val, i) => {
+      if (val.id !== id) {
+        // console.log("vlue",val)
+        return val
       }
-
-      )
-          console.log("newuser",newuser)
-      setuserData(newuser);
     }
+
+    )
+    console.log("newuser", newuser)
+    setuserData(newuser);
+  }
   function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -42,7 +41,7 @@ const FlatListScreen = () => {
 
             <View
               style={{ ...styles.circle, backgroundColor: getRandomColor() }}>
-              <Text style={{ color: 'white', fontWeight: 'bold' , fontSize:20}}>
+              <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}>
                 {item.id}
               </Text>
             </View>
@@ -60,7 +59,7 @@ const FlatListScreen = () => {
               <TouchableOpacity
                 style={styles.delete}
                 onPress={() => removeItem(item.id)} >
-                <Text style={{ color: 'white',}}>Delete</Text>
+                <Text style={{ color: 'white', }}>Delete</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -105,11 +104,11 @@ const styles = StyleSheet.create({
   },
   delete: {
     height: 25,
-    marginTop:10,
+    marginTop: 10,
     width: 50,
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: 'red',
     borderRadius: 10
 

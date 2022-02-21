@@ -8,6 +8,7 @@ import Flatlist from './Falatlist';
 import ImageScreen from './ImageScreen';
 import AddColorScreen from './AddColorScreen';
 import LoginScreen from './LoginScreen';
+import CallLog from './CallLog';
 
 
 const HomeScreen = () => {
@@ -44,6 +45,12 @@ const HomeScreen = () => {
             <Button 
                     title='Go To AddColorScreen'
                     onPress={() => { navigation.navigate(AddColorScreen) }} />
+            </View>       
+            
+            <View style={styles.button}>
+            <Button 
+                    title='Go To Call Log Screen'
+                    onPress={() => { navigation.navigate(CallLog) }} />
             </View>       
             
         </View>

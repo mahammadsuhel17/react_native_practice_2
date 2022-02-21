@@ -7,6 +7,7 @@ import ImageScreen from './ImageScreen';
 import AddColorScreen from './AddColorScreen';
 import LoginScreen from './LoginScreen';
 import FlatListScreen from './Falatlist';
+import CallLog from './CallLog';
 
 
 
@@ -22,6 +23,7 @@ function Routs() {
           <Stack.Screen name="ImageScreen" component={ImageScreen} />
           <Stack.Screen name="AddColorScreen" component={AddColorScreen} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          <Stack.Screen name="CallLog" component={CallLog} />
       </Stack.Navigator>
       </NavigationContainer>
     )
