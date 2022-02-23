@@ -26,12 +26,6 @@ const LoginScreen = () => {
                     placeholder="Enter Your Password"
                 ></TextInput>
             </View>
-            {/* <View style={styles.loginButton}>
-                <Button
-                    title='LOGIN'
-                    onPress={() => alert("login")}
-                />
-            </View> */}
 
             <TouchableOpacity style={styles.loginButton}>
                 <Text

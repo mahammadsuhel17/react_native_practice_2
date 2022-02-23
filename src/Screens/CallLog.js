@@ -8,6 +8,7 @@ import moment from 'moment';
 const CallLog = () => {
 
     const [Call, setcall] = useState(Call_Log);
+    const [Search, setSearch] = useState('')
 
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
@@ -25,6 +26,10 @@ const CallLog = () => {
         Linking.openURL(phoneNumber);
     };
 
+    const search = () => {
+        setSearch(input)
+    }
+
     // var relative = moment().startOf('hour').fromNow();
 
 
@@ -34,7 +39,7 @@ const CallLog = () => {
             <View style={styles.topbar}>
                 <TextInput placeholder='Search Contacts'
                     style={styles.search}
-                    onChangeText={() => { search() }} >
+                    onChangeText={(input) => search('hi')} >
                 </TextInput>
                 <Icon
                     size={10} name="close" color="black" />
@@ -89,9 +94,9 @@ const styles = StyleSheet.create(
         },
 
         circle: {
-            height: 55,
-            width: 55,
-            borderRadius: 55,
+            height: 50,
+            width: 50,
+            borderRadius: 50,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
@@ -100,8 +105,7 @@ const styles = StyleSheet.create(
             flexDirection: 'row',
             flex: 2,
             alignItems: 'center',
-            paddingLeft: 10,
-            fontFamily: "Lato-Regular"
+            paddingLeft: 20,
         },
         CallButton: {
             flex: 1,
@@ -129,6 +133,7 @@ const styles = StyleSheet.create(
             justifyContent: 'center'
         },
         search: {
+            marginTop:25,
             borderRadius: 9,
             backgroundColor: "white",
             width: 325,

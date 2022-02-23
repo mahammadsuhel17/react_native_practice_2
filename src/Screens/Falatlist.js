@@ -15,7 +15,6 @@ const FlatListScreen = () => {
         return val
       }
     }
-
     )
     console.log("newuser", newuser)
     setuserData(newuser);

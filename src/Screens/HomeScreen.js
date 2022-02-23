@@ -9,6 +9,7 @@ import ImageScreen from './ImageScreen';
 import AddColorScreen from './AddColorScreen';
 import LoginScreen from './LoginScreen';
 import CallLog from './CallLog';
+import RegisterScreen from './RegisterScreen';
 
 
 const HomeScreen = () => {
@@ -16,6 +17,12 @@ const HomeScreen = () => {
 
     return (
         <View style={{flex:1}}>
+            
+            <View style={styles.button}>
+            <Button 
+                    title='Go To Register Screen'
+                    onPress={() => { navigation.navigate(RegisterScreen) }} />
+            </View> 
             
             <View style={styles.button}>
             <Button 
@@ -51,7 +58,7 @@ const HomeScreen = () => {
             <Button 
                     title='Go To Call Log Screen'
                     onPress={() => { navigation.navigate(CallLog) }} />
-            </View>       
+            </View>   
             
         </View>
 
