@@ -59,12 +59,12 @@ const styles = StyleSheet.create({
     },
     emailIcon: {
         position: 'absolute',
-        marginTop: 257,
+        marginTop: 265,
         marginLeft: 70
     },
     passwordIcon: {
         position: 'absolute',
-        marginTop: 320,
+        marginTop: 328,
         marginLeft: 70
     },
     loginButton: {

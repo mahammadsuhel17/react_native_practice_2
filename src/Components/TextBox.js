@@ -2,15 +2,15 @@ import React from 'react';
 import {
     View, Text, TextInput, StyleSheet
 } from 'react-native';
-import { FloatingLabelInput } from 'react-native-floating-label-input';
 
 
-const TextBox = ({ props }) => {
-    const {label}=props;
+const TextBox = ( props ) => {
+    const {label }=props;
     return (
         <View style={styles.textBoxContainer}>
             <TextInput
-            onChange={()=>{handleChange(e)}}
+            {...props}
+            // onChangeText={()=>{handleOnChangeText}}
                 style={styles.textBox}
             />
              <Text style={styles.label}>{label} </Text>
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         marginLeft: 20
     },
     textBoxContainer: {
-        height: 40,
+        height: 45,
         minWidth: '80%',
         borderWidth: 1,
         borderColor: '#606060',
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         position: "absolute", 
         marginLeft:25,
-        marginBottom:20,
+        marginBottom:25,
         bottom:10,
         paddingLeft:5,
         paddingRight:5
